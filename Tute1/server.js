@@ -13,7 +13,10 @@ app.post('/submit', (req, res) => {
     const coursework1 = parseFloat(req.body.coursework1);
     const coursework2 = parseFloat(req.body.coursework2);
     const overallMark = (coursework1 * 0.4) + (coursework2 * 0.6);
-    res.send(`Overall Module Mark: ${overallMark}`);
+
+    res.json({
+        overallMark: overallMark 
+    });
 });
 
 function listenerCallback(port) {
