@@ -9,10 +9,11 @@ class Server {
         console.log(`Server is running on http://${serverconfig.host}:${serverconfig.port}`);
     }
 
-    static start(express, app, port) {
+    static start() {
+        const app = express();
         Middleware.useRequests(app, express);
-        app.listen(port, this.#serve);
+        app.listen(serverconfig.port, this.#serve);
     }
 }
 
-Server.start(express, express(), 3000);
+Server.start();
