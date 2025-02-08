@@ -2,14 +2,14 @@
   "name": "intro",
   "version": "1.0.0",
   "description": "intro",
-  "main": "Server.js",
+  "main": "index.js",
   "keywords": [],
-  "author": "",
+  "author": "Tharin",
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.2"
   },
   "scripts": {
-    "start": "node Server.js"
+    "server": "node index.js"
   }
 }
